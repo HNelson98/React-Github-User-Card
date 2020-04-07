@@ -12,8 +12,8 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 ## Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
+- [Y] Create a forked copy of this project.
+- [Y] Add your team lead as collaborator on Github.
 - [ ] Clone your OWN version of the repository in your terminal
 - [ ] Use CRA to create a new React app in this repository
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
