@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import UserFollowers from './UserFollowers';
+import './App.css'
 
 
 class App extends React.Component {
