@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      login: "",
+      avatar: "",
+      followers: "",
+      following: "",
+    };
+  }
+
+  componentDidMount(){
+    axios.get("https://api.github.com/users/hnelson98")
+    .then(res => {
+      console.log(res.data, "RESPONSE")
+      this.setState({
+        name: res.data.name,
+      login: res.data.login,
+      avatar: res.data.avatar_url,
+      followers: res.data.followers,
+      following: res.data.following,
+      })
+    .catch(err =>{
+      console.log("AXIOS ERROR:", err)
+    })
+    });
+
+    
+
+
+  }
+
+
+  render() {
+    return (
+      <div className= "app">
+        <h1>Github Users</h1>
+        <div className= "user">
+          <h2 className= "name">{this.state.name}</h2>
+           <img width= "200" src= {this.state.avatar} alt={"Avatar"} />
+           <h3>Username: {this.state.login}</h3>
+           <p>Followers: {this.state.followers} Following: {this.state.following}</p>
+        </div>
+      </div>
+    )
+  }
 }
-
 export default App;
