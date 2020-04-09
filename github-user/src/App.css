@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+.friends{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2%;
+  margin-top: 1%;
+  height: 100%;
+
+}
+
+.friendCard{
+  width: 20%;
+  margin: 0 auto;
+  padding: 2%;
+  margin-top: 1%;
+ 
+  height: 100%;
+  background-color: aquamarine;
+  color: #282c34;
+  display: flex;
+  flex-direction: column;
+
+
+}
